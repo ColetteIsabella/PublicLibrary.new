@@ -24,15 +24,23 @@ class Book
 			@title=title
 			@stack=stack
 	end
-	def enshelf()		
+
+	def enshelf()	
+		return "#{title} is returned to #{stack}"	
 			contents_1=contents.new("A Wrinkle in Time", 1)
 			contents_2=contents.new("Blindsight", 2)
 			contents_3=contents.new("Contact", 3)
 			contents_4=contents.new("Dirk Gently", 4)
-			return "#{title} is returned to #{stack}"
-		def unshelf()	
+		contents_1.enshelf()
+		contents_2.enshelf()
+		contents_3.enshelf()
+		contents_4.enshelf()
+
+	end
+
+	def unshelf()	
 		title=gets.chomp
-		if books[title.to_sym].nil
+	if books[title.to_sym].nil
 			return "#{title} does not exist in this library"
 		else
 			books.delete(title.to_sym)
