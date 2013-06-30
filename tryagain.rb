@@ -1,6 +1,6 @@
 class Library
-def shelves
-	ary = [1, 2, 3, 4]
+	shelves= ary = [1, 2, 3, 4]
+	return "We have shelves: #{shelves}"
 end	
 		books = ["A Wrinkle in Time", "Blindsight", "Contact", "Dirk Gently"]
 		books.each do|collection|
